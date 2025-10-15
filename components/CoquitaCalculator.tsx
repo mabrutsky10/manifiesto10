@@ -18,9 +18,9 @@ import {
 } from '@/lib/utils';
 
 export default function CoquitaCalculator() {
-  const [indiceCoquita, setIndiceCoquita] = useState(CALCULATOR_DEFAULTS.indiceCoquita);
-  const [jugadores, setJugadores] = useState(CALCULATOR_DEFAULTS.jugadores);
-  const [sociosPorJugador, setSociosPorJugador] = useState(CALCULATOR_DEFAULTS.sociosPorJugador);
+  const [indiceCoquita, setIndiceCoquita] = useState<number>(CALCULATOR_DEFAULTS.indiceCoquita);
+  const [jugadores, setJugadores] = useState<number>(CALCULATOR_DEFAULTS.jugadores);
+  const [sociosPorJugador, setSociosPorJugador] = useState<number>(CALCULATOR_DEFAULTS.sociosPorJugador);
   const [validation, setValidation] = useState<{ isValid: boolean; errors: string[] }>({ isValid: true, errors: [] });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalType, setModalType] = useState('');
