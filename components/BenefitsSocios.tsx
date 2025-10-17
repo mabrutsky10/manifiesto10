@@ -81,7 +81,7 @@ export default function BenefitsSocios() {
                 </svg>
               </div>
               <h3 className="font-semibold text-gray-900 mb-2 select-text">Cancelación libre</h3>
-              <p className="text-gray-600 text-sm select-text">Cancela cuando quieras sin penalidades</p>
+              <p className="text-gray-600 text-sm select-text">Cancelá cuando quieras, sin penalidades</p>
             </div>
             
             <div className="flex flex-col items-center">
@@ -91,7 +91,7 @@ export default function BenefitsSocios() {
                 </svg>
               </div>
               <h3 className="font-semibold text-gray-900 mb-2 select-text">Soporte dedicado</h3>
-              <p className="text-gray-600 text-sm select-text">Atención cuando la necesites</p>
+              <p className="text-gray-600 text-sm select-text">Atención personalizada cuando la necesites</p>
               
               {/* WhatsApp Logo */}
               <div className="mt-3 flex justify-center">

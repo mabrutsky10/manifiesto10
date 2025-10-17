@@ -64,6 +64,9 @@ export default function RootLayout({
           }}
         />
         
+        {/* Tally Widget */}
+        <script async src="https://tally.so/widgets/embed.js"></script>
+        
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"

@@ -42,20 +42,20 @@ export const LEAD_MODAL_TYPES = {
 // Content texts (Spanish as default)
 export const CONTENT = {
   hero: {
-    title: 'Financiá tu equipo con Socios Coquitas',
-    subtitle: 'Convocá a tu comunidad: cada socio aporta "lo que vale una coca" por mes y acelera tu vestuario, viajes y premios.',
-    ctaPrimary: 'Crear programa Coquita del equipo',
-    ctaSecondary: 'Probar la Calculadora',
+    title: 'Financiá tu equipo con "Socios Coquitas"',
+    subtitle: 'Convocá a tu comunidad: cada socio que aporta "lo que vale una coca" por mes impulsa nuestros viajes, premios y vestuario.',
+    ctaPrimary: 'Crear un programa "Coquita" del equipo',
+    ctaSecondary: 'Probar la Calculadora "Coquita"',
     note: 'Próximamente: propuesta completa para Sponsors',
   },
   howItWorks: {
     title: 'Cómo funciona',
     steps: [
-      'El índice Coquita se calcula sólo con el precio promedio de las bebidas cola referentes. (Ej. $3200 por mes)',
+      'El "Índice Coquita" se calcula sólo con el precio promedio de las bebidas cola referentes. (Por ejemplo: $3200 por mes)',
       'Cada jugador invita a sus familiares y amigos a ser socios',
       'Los socios aportan mensualmente el valor de una coca',
       'Tus socios participan en sorteos y beneficios exclusivos',
-      'El equipo recibe el 70% en efectivo o el 90% en crédito para vestuario',
+      'El equipo recibe el 70% en efectivo o el 90% en crédito para vestuario (compras en vestuariodelfutbol.com)',
     ],
   },
   benefits: {
@@ -118,7 +118,7 @@ export const CONTENT = {
   sponsors: {
     title: 'Sponsors',
     description: 'Próximamente: propuesta completa para patrocinadores',
-    cta: 'Quiero recibir la propuesta',
+    cta: 'Quiero estar informado',
   },
   useCases: {
     title: 'Casos de uso',
@@ -159,7 +159,7 @@ export const CONTENT = {
       },
       {
         question: '¿Qué pasa si un jugador se va del equipo?',
-        answer: 'Sus socios pueden seguir aportando al equipo o transferir su aporte a otro jugador.',
+        answer: 'Los socios son del equipo, por ende pueden seguir aportando al mismo.',
       },
       {
         question: '¿Hay algún costo de gestión?',
@@ -167,7 +167,7 @@ export const CONTENT = {
       },
       {
         question: '¿Cómo se manejan los pagos?',
-        answer: 'Los pagos se procesan de forma segura y automática cada mes.',
+        answer: 'Los pagos se procesan de forma segura y automática cada mes por Mercado Pago.',
       },
       {
         question: '¿Qué beneficios reciben los socios?',
@@ -177,7 +177,7 @@ export const CONTENT = {
   },
   finalCta: {
     title: '¿Listo para financiar tu equipo?',
-    subtitle: 'Crea tu programa Coquita en minutos y comienza a recibir el apoyo de tu comunidad.',
+    subtitle: 'Creá tu programa "Coquita" en minutos y comenzá a recibir el apoyo de tu comunidad.',
     cta: 'Crear programa Coquita',
   },
 } as const;

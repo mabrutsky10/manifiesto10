@@ -73,7 +73,7 @@ export default function FinalCTA() {
                   </svg>
                 </div>
                 <h3 className="font-semibold text-white mb-2">Sin compromiso</h3>
-                <p className="text-primary-100 text-sm">Cancela cuando quieras</p>
+                <p className="text-primary-100 text-sm">Cancelá cuando quieras</p>
               </div>
             </div>
           </div>
