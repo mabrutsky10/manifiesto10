@@ -83,10 +83,9 @@ export default function FAQCoquitas() {
               </p>
               <button
                 onClick={() => {
-                  const modalRoot = document.getElementById('lead-modal-root');
-                  if (modalRoot) {
-                    modalRoot.setAttribute('data-modal-type', 'consultation');
-                  }
+                  const message = encodeURIComponent('Quiero que me asesoren sobre los socios coquita');
+                  const whatsappUrl = `https://wa.me/5491123456789?text=${message}`;
+                  window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
                 }}
                 className="btn-primary inline-flex items-center gap-2"
               >
