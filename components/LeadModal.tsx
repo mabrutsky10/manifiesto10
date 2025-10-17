@@ -132,7 +132,7 @@ export default function LeadModal({ isOpen: propIsOpen, onClose: propOnClose, mo
       0, // We don't have calculator results here
       0
     );
-    const whatsappUrl = `https://wa.me/5491123456789?text=${message}`;
+    const whatsappUrl = `https://wa.me/5493512392367?text=${message}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
