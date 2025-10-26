@@ -1,7 +1,6 @@
 import HeroCoquitas from '@/components/HeroCoquitas';
 import HowItWorksTeam from '@/components/HowItWorksTeam';
-import BenefitsTeam from '@/components/BenefitsTeam';
-import BenefitsSocios from '@/components/BenefitsSocios';
+import BenefitsUnified from '@/components/BenefitsUnified';
 import CoquitaCalculator from '@/components/CoquitaCalculator';
 import ProdeConnector from '@/components/ProdeConnector';
 import SponsorsTeaser from '@/components/SponsorsTeaser';
@@ -16,8 +15,7 @@ export default function SociosCoquitasPage() {
     <main className="min-h-screen bg-white">
       <HeroCoquitas />
       <HowItWorksTeam />
-      <BenefitsTeam />
-      <BenefitsSocios />
+      <BenefitsUnified />
       <CoquitaCalculator />
       <ProdeConnector />
       <SponsorsTeaser />
