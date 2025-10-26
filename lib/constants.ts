@@ -51,11 +51,11 @@ export const CONTENT = {
   howItWorks: {
     title: 'Cómo funciona',
     steps: [
-      'El "Índice Coquita" se calcula sólo con el precio promedio de las bebidas cola referentes. (Por ejemplo: $3200 por mes)',
-      'Cada jugador invita a sus familiares y amigos a ser socios',
-      'Los socios aportan mensualmente el valor de una coca',
-      'Tus socios participan en sorteos y beneficios exclusivos',
-      'El equipo recibe el 70% en efectivo o el 90% en crédito para vestuario (compras en vestuariodelfutbol.com)',
+      'Cada equipo tiene que tener su perfil completo en +10: nombre, escudo, cada jugador que lo compone y foto del equipo',
+      'La cuota de socio mensual vale lo que cuesta "una coquita". Precio promedio de las bebidas cola referentes. (Por ejemplo: $3200 por mes)',
+      'Cada jugador se hace socio e invita a sus familiares y amigos a ser socios',
+      'Todos los socios participan en sorteos increíbles y beneficios exclusivos',
+      'Cerrado el mes societario (final de mes), el equipo recibe el dinero de todas las cuotas incluyendo los jugadores que se hacen socios. El delegado recibe el 70% del total en efectivo o el 90% en crédito para vestuario (compras en vestuariodelfutbol.com)',
     ],
   },
   benefits: {
