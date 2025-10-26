@@ -55,7 +55,7 @@ export default function HeroCoquitas() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8 animate-slide-up">
               <button
-                onClick={() => handleCTAClick(LEAD_MODAL_TYPES.CREATE_PROGRAM)}
+                onClick={handleCalculatorClick}
                 className="btn-primary text-lg px-8 py-4 w-full sm:w-auto"
                 aria-label="Crear programa Coquita del equipo"
               >
@@ -63,7 +63,7 @@ export default function HeroCoquitas() {
               </button>
               
               <button
-                onClick={handleCalculatorClick}
+                onClick={() => handleCTAClick(LEAD_MODAL_TYPES.CREATE_PROGRAM)}
                 className="btn-secondary text-lg px-8 py-4 w-full sm:w-auto"
                 aria-label="Probar la Calculadora"
               >

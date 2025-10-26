@@ -29,8 +29,8 @@ export default function BenefitsUnified() {
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <div className="text-center mb-8">
                 <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  <svg className="w-8 h-8 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M11.7 2.805a.5.5 0 0 1 .6 0A2 2 0 0 0 14 4.041V6a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v2.764a2 2 0 0 1-.596 1.418L15 13v7a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-7l-3.404-2.818A2 2 0 0 1 5 8.764V6a1 1 0 0 1 1-1h3a1 1 0 0 0 1-1V4.04a2 2 0 0 0-1.3-1.235ZM10 8a1 1 0 0 0-1 1v2a1 1 0 1 0 2 0V9a1 1 0 0 0-1-1Zm4 0a1 1 0 0 0-1 1v2a1 1 0 1 0 2 0V9a1 1 0 0 0-1-1Z"/>
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
