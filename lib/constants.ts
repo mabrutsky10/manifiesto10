@@ -42,8 +42,8 @@ export const LEAD_MODAL_TYPES = {
 // Content texts (Spanish as default)
 export const CONTENT = {
   hero: {
-    title: 'Financiá tu equipo con "Socios Coquitas"',
-    subtitle: 'Convocá a tu comunidad: cada socio que aporta "lo que vale una coca" por mes impulsa nuestros viajes, premios y vestuario.',
+    title: 'Financiá tu equipo con "Cuota Social Amateur"',
+    subtitle: 'Convocá a tus amigos, familiares y cercanos: cada socio aporta desde "lo que vale una coquita" apoyando a que juegues al fútbol, y tienen muchísimos beneficios y premios.',
     ctaPrimary: 'Crear un programa "Coquita" del equipo',
     ctaSecondary: 'Probar la Calculadora "Coquita"',
     note: 'Próximamente: propuesta completa para Sponsors',
