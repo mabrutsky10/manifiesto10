@@ -51,11 +51,12 @@ export const CONTENT = {
   howItWorks: {
     title: 'Cómo funciona',
     steps: [
-      'Cada equipo tiene que tener su perfil completo en +10: nombre, escudo, cada jugador que lo compone y foto del equipo',
-      'La cuota de socio mensual vale lo que cuesta "una coquita". Precio promedio de las bebidas cola referentes. (Por ejemplo: $3200 por mes)',
-      'Cada jugador se hace socio e invita a sus familiares y amigos a ser socios',
-      'Todos los socios participan en sorteos increíbles y beneficios exclusivos',
-      'Cerrado el mes societario (final de mes), el equipo recibe el dinero de todas las cuotas incluyendo los jugadores que se hacen socios. El delegado recibe el 70% del total en efectivo o el 90% en crédito para vestuario (compras en vestuariodelfutbol.com)',
+      'Cada equipo debe tener su perfil completo en +10: nombre, escudo, listado de jugadores y foto grupal del equipo.',
+      'La cuota mensual de socio equivale al valor de "una coquita", calculado según el precio promedio de las gaseosas cola del mercado (por ejemplo: $3200 por mes).',
+      'Cada jugador se hace socio e invita a sus familiares y amigos a hacer lo mismo. ¡Cualquier persona puede sumarse!',
+      'Todos los socios participan en sorteos increíbles y beneficios exclusivos. ¡Cada socio que se suma hace crecer a su equipo favorito!',
+      'Al cierre del mes, el equipo recibe el total recaudado por las cuotas, incluyendo las de los jugadores que también se sumaron como socios.',
+      'El delegado puede elegir entre: 70% del total en efectivo, o 90% en crédito para equipamiento de vestuariodelfutbol.com.',
     ],
   },
   benefits: {
