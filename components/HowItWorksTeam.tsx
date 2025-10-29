@@ -63,7 +63,7 @@ export default function HowItWorksTeam() {
           </h2>
           
           {/* Steps */}
-          <div className="flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-4">
+          <div className="flex flex-col lg:flex-row lg:items-stretch gap-8 lg:gap-4">
             {CONTENT.howItWorks.steps.map((step, index) => (
               <div
                 key={index}
@@ -81,13 +81,15 @@ export default function HowItWorksTeam() {
                   </p>
                 </div>
 
-                {/* CTA Button */}
-                <button
-                  onClick={() => handleCTAClick(CONTENT.howItWorks.ctas[index], index)}
-                  className="w-full max-w-xs bg-white border-2 border-primary-600 text-primary-600 px-4 py-3 rounded-lg font-semibold text-sm hover:bg-primary-600 hover:text-white transition-all duration-200 hover:scale-105 shadow-sm hover:shadow-md mt-auto"
-                >
-                  {CONTENT.howItWorks.ctas[index]}
-                </button>
+                {/* CTA Button - Fixed at bottom */}
+                <div className="w-full flex justify-center">
+                  <button
+                    onClick={() => handleCTAClick(CONTENT.howItWorks.ctas[index], index)}
+                    className="w-full max-w-xs bg-white border-2 border-primary-600 text-primary-600 px-4 py-3 rounded-lg font-semibold text-sm hover:bg-primary-600 hover:text-white transition-all duration-200 hover:scale-105 shadow-sm hover:shadow-md"
+                  >
+                    {CONTENT.howItWorks.ctas[index]}
+                  </button>
+                </div>
                 
                 {/* Connector line (hidden on last item) */}
                 {index < CONTENT.howItWorks.steps.length - 1 && (
