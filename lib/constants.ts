@@ -58,6 +58,14 @@ export const CONTENT = {
       'Al cierre del mes, el equipo recibe el total recaudado por las cuotas, incluyendo las de los jugadores que también se sumaron como socios.',
       'El delegado puede elegir entre: 70% del total en efectivo, o 90% en crédito para equipamiento de vestuariodelfutbol.com.',
     ],
+    ctas: [
+      'Crear Equipo +10',
+      'Cuota Social Mínima $3500',
+      'Al asociarse te apoyan y siguen todas tus novedades',
+      'Ver premios vigentes',
+      'Recaudar las cuotas mes a mes',
+      'Calculadora Recaudadora',
+    ],
   },
   benefits: {
     team: {

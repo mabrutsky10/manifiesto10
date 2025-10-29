@@ -3,10 +3,60 @@
 import { CONTENT } from '@/lib/constants';
 
 export default function HowItWorksTeam() {
+  const handleCTAClick = (ctaText: string, stepIndex: number) => {
+    // Track the CTA click
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'click_cta_how_it_works', {
+        cta_text: ctaText,
+        step_number: stepIndex + 1,
+      });
+    }
+    
+    // Handle specific CTAs
+    switch (stepIndex) {
+      case 0: // Crear Equipo +10
+        window.open('https://plus10.com.ar', '_blank', 'noopener,noreferrer');
+        break;
+      case 1: // Cuota Social Mínima $3500
+        // Scroll to calculator
+        const calculatorElement = document.getElementById('calculator');
+        if (calculatorElement) {
+          calculatorElement.scrollIntoView({ behavior: 'smooth' });
+        }
+        break;
+      case 2: // Al asociarse te apoyan y siguen todas tus novedades
+        // Open lead modal for team creation
+        const event = new CustomEvent('openLeadModal', { 
+          detail: { type: 'CREATE_PROGRAM' } 
+        });
+        window.dispatchEvent(event);
+        break;
+      case 3: // Ver premios vigentes
+        window.open('https://prode.com.ar', '_blank', 'noopener,noreferrer');
+        break;
+      case 4: // Recaudar las cuotas mes a mes
+        // Open lead modal for collection info
+        const event2 = new CustomEvent('openLeadModal', { 
+          detail: { type: 'CREATE_PROGRAM' } 
+        });
+        window.dispatchEvent(event2);
+        break;
+      case 5: // Calculadora Recaudadora
+        // Scroll to calculator
+        const calculatorElement2 = document.getElementById('calculator');
+        if (calculatorElement2) {
+          calculatorElement2.scrollIntoView({ behavior: 'smooth' });
+        }
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
     <section className="section-padding bg-white">
       <div className="container-custom">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Title */}
           <h2 className="text-center mb-16 text-balance">
             {CONTENT.howItWorks.title}
@@ -25,11 +75,19 @@ export default function HowItWorksTeam() {
                 </div>
                 
                 {/* Step content */}
-                <div className="flex-1 relative z-10">
+                <div className="flex-1 relative z-10 mb-6">
                   <p className="text-gray-700 leading-relaxed text-sm select-text">
                     {step}
                   </p>
                 </div>
+
+                {/* CTA Button */}
+                <button
+                  onClick={() => handleCTAClick(CONTENT.howItWorks.ctas[index], index)}
+                  className="w-full max-w-xs bg-white border-2 border-primary-600 text-primary-600 px-4 py-3 rounded-lg font-semibold text-sm hover:bg-primary-600 hover:text-white transition-all duration-200 hover:scale-105 shadow-sm hover:shadow-md"
+                >
+                  {CONTENT.howItWorks.ctas[index]}
+                </button>
                 
                 {/* Connector line (hidden on last item) */}
                 {index < CONTENT.howItWorks.steps.length - 1 && (
