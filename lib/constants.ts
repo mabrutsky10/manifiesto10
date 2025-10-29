@@ -44,8 +44,8 @@ export const CONTENT = {
   hero: {
     title: 'Financiá tu equipo con "Cuota Social Amateur"',
     subtitle: 'Convocá a tus amigos, familiares y cercanos: cada socio aporta desde "lo que vale una coquita" apoyando a que juegues al fútbol, y tienen muchísimos beneficios y premios.',
-    ctaPrimary: 'Crear un programa "Coquita" del equipo',
-    ctaSecondary: 'Probar la Calculadora "Coquita"',
+    ctaPrimary: 'Cómo funciona',
+    ctaSecondary: 'Calculadora Recaudadora',
     note: 'Próximamente: propuesta completa para Sponsors',
   },
   howItWorks: {
@@ -86,7 +86,7 @@ export const CONTENT = {
     },
   },
   calculator: {
-    title: 'Calculá tu programa Coquita',
+    title: 'Calculadora Recaudadora',
     inputs: {
       indiceCoquita: {
         label: 'Índice Coquita (por mes)',

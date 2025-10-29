@@ -54,7 +54,7 @@ export default function HowItWorksTeam() {
   };
 
   return (
-    <section className="section-padding bg-white">
+    <section id="how-it-works" className="section-padding bg-white">
       <div className="container-custom">
         <div className="max-w-6xl mx-auto">
           {/* Title */}
@@ -84,7 +84,7 @@ export default function HowItWorksTeam() {
                 {/* CTA Button */}
                 <button
                   onClick={() => handleCTAClick(CONTENT.howItWorks.ctas[index], index)}
-                  className="w-full max-w-xs bg-white border-2 border-primary-600 text-primary-600 px-4 py-3 rounded-lg font-semibold text-sm hover:bg-primary-600 hover:text-white transition-all duration-200 hover:scale-105 shadow-sm hover:shadow-md"
+                  className="w-full max-w-xs bg-white border-2 border-primary-600 text-primary-600 px-4 py-3 rounded-lg font-semibold text-sm hover:bg-primary-600 hover:text-white transition-all duration-200 hover:scale-105 shadow-sm hover:shadow-md mt-auto"
                 >
                   {CONTENT.howItWorks.ctas[index]}
                 </button>

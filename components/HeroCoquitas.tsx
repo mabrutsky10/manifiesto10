@@ -23,6 +23,15 @@ export default function HeroCoquitas() {
     trackEvent(GA4_EVENTS.START_LEAD, { origen: 'hero', tipo: type });
   };
 
+  const handleHowItWorksClick = () => {
+    // Scroll to how it works section
+    const howItWorksElement = document.getElementById('how-it-works');
+    if (howItWorksElement) {
+      howItWorksElement.scrollIntoView({ behavior: 'smooth' });
+    }
+    trackEvent(GA4_EVENTS.START_LEAD, { origen: 'hero', tipo: 'how-it-works' });
+  };
+
   const handleCalculatorClick = () => {
     // Scroll to calculator section
     const calculatorElement = document.getElementById('calculator');
@@ -55,17 +64,17 @@ export default function HeroCoquitas() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8 animate-slide-up">
               <button
-                onClick={handleCalculatorClick}
+                onClick={handleHowItWorksClick}
                 className="btn-primary text-lg px-8 py-4 w-full sm:w-auto"
-                aria-label="Crear programa Coquita del equipo"
+                aria-label="Cómo funciona"
               >
                 {CONTENT.hero.ctaPrimary}
               </button>
               
               <button
-                onClick={() => handleCTAClick(LEAD_MODAL_TYPES.CREATE_PROGRAM)}
+                onClick={handleCalculatorClick}
                 className="btn-secondary text-lg px-8 py-4 w-full sm:w-auto"
-                aria-label="Probar la Calculadora"
+                aria-label="Calculadora Recaudadora"
               >
                 {CONTENT.hero.ctaSecondary}
               </button>
