@@ -19,7 +19,7 @@ export default function BenefitsUnified() {
               Beneficios para todos
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Cada parte del programa &quot;Socios Coquitas&quot; tiene sus ventajas únicas
+              Cada parte del programa &quot;Cuota Social Amateur&quot; tiene sus ventajas únicas
             </p>
           </div>
 

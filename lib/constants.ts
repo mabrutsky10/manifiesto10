@@ -180,7 +180,7 @@ export const CONTENT = {
   },
   finalCta: {
     title: '¿Listo para financiar tu equipo?',
-    subtitle: 'Creá tu programa "Coquita" en minutos y comenzá a recibir el apoyo de tu comunidad.',
+    subtitle: 'Creá tu programa de "Cuota Social Amateur" en minutos y comenzá a recibir el apoyo de tu comunidad.',
     cta: 'Crear programa Coquita',
   },
 } as const;
