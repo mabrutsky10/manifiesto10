@@ -115,7 +115,7 @@ export default function HeroCoquitas() {
               {/* Video description */}
               <div className="mt-4 text-center lg:text-right">
                 <p className="text-sm text-gray-600">
-                  Descubrí cómo funciona &quot;Socios Coquitas&quot;
+                  Descubrí cómo funciona &quot;Cuota Social Amateur&quot;
                 </p>
               </div>
             </div>
