@@ -120,8 +120,8 @@ export const CONTENT = {
     cta: 'Entrar a PRODE Comunitario',
   },
   sponsors: {
-    title: 'Sponsors',
-    description: 'Próximamente: propuesta completa para patrocinadores',
+    title: 'Tus propios Sponsors',
+    description: 'Próximamente: le podrás brindar a esas marcas que ya te acompañan, o que te pueden acompañar, una herramienta muy poderosa para dar a conocer sus productos, servicios, y su marca, con la comunidad de socios y seguidores que te apoyan. Con metricas de impacto tal como lo hacen los profesionales',
     cta: 'Quiero estar informado',
   },
   useCases: {

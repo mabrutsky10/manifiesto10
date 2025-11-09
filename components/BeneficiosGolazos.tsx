@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import PremiosSociosModal from './PremiosSociosModal';
 import RecaudacionEquipoModal from './RecaudacionEquipoModal';
+import NivelesEquipoModal from './NivelesEquipoModal';
 
 const BENEFICIOS = [
   {
@@ -69,6 +70,7 @@ const INTRO_TEXT = 'Juntos revalorizamos el fútbol amateur, profesionalizamos s
 export default function BeneficiosGolazos() {
   const [isPremiosSociosModalOpen, setIsPremiosSociosModalOpen] = useState(false);
   const [isRecaudacionEquipoModalOpen, setIsRecaudacionEquipoModalOpen] = useState(false);
+  const [isNivelesEquipoModalOpen, setIsNivelesEquipoModalOpen] = useState(false);
 
   const getColorClasses = (color: string) => {
     switch (color) {
@@ -164,6 +166,222 @@ export default function BeneficiosGolazos() {
                               {index === 0 ? 'Ver cronograma de premios' : index === 1 ? 'Ver ejemplo de recaudación' : 'Ir al Radar +10'}
                             </button>
                           )}
+                          {/* CTA para niveles (Equipo, item 2) */}
+                          {index === 1 && itemIndex === 1 && (
+                            <button
+                              onClick={() => setIsNivelesEquipoModalOpen(true)}
+                              className="w-full border-2 border-blue-600 text-blue-600 bg-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-blue-50 transition-colors duration-200 mt-2 text-center"
+                            >
+                              Ver niveles de profesionalismo
+                            </button>
+                          )}
+                          {/* Ejemplos de beneficios destacados (Equipo, item 3) */}
+                          {index === 1 && itemIndex === 2 && (
+                            <div className="mt-4">
+                              <p className="text-sm font-semibold text-gray-700 mb-3 text-center">
+                                Marcas con beneficios destacados:
+                              </p>
+                              <div className="grid grid-cols-2 gap-3">
+                                <a
+                                  href="https://tribunera.com.ar/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="flex flex-col items-center justify-center p-3 bg-gray-50 rounded-lg border-2 border-gray-200 hover:border-blue-600 hover:bg-blue-50 transition-all duration-200 group"
+                                  title="Ver Yerba Mate Tribunera"
+                                >
+                                  <div className="w-12 h-12 mb-2 flex items-center justify-center">
+                                    <img 
+                                      src="/img/tribu.png" 
+                                      alt="Yerba Mate Tribunera" 
+                                      className="w-full h-full object-cover rounded-full"
+                                      onError={(e) => {
+                                        const target = e.target as HTMLImageElement;
+                                        target.style.display = 'none';
+                                        const parent = target.parentElement!;
+                                        if (!parent.querySelector('.fallback')) {
+                                          parent.innerHTML = '<div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center fallback"><span class="text-white font-bold text-xs">TM</span></div>';
+                                        }
+                                      }}
+                                    />
+                                  </div>
+                                  <span className="text-xs text-gray-700 group-hover:text-blue-600 font-medium text-center leading-tight">
+                                    Yerba Mate Tribunera
+                                  </span>
+                                </a>
+                                <a
+                                  href="https://www.atfacampusvirtual.com/ES/index.html"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="flex flex-col items-center justify-center p-3 bg-gray-50 rounded-lg border-2 border-gray-200 hover:border-blue-600 hover:bg-blue-50 transition-all duration-200 group"
+                                  title="Ver CVA - Carrera de Entrenador de fútbol"
+                                >
+                                  <div className="w-12 h-12 mb-2 flex items-center justify-center">
+                                    <img 
+                                      src="/img/cva.png" 
+                                      alt="CVA - Carrera de Entrenador de fútbol" 
+                                      className="w-full h-full object-cover rounded-full"
+                                      onError={(e) => {
+                                        const target = e.target as HTMLImageElement;
+                                        target.style.display = 'none';
+                                        const parent = target.parentElement!;
+                                        if (!parent.querySelector('.fallback')) {
+                                          parent.innerHTML = '<div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center fallback"><span class="text-white font-bold text-xs">CVA</span></div>';
+                                        }
+                                      }}
+                                    />
+                                  </div>
+                                  <span className="text-xs text-gray-700 group-hover:text-blue-600 font-medium text-center leading-tight">
+                                    CVA. Carrera de Entrenador de fútbol
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          )}
+                          {/* CTA secundario para competencias (Socios, item 2) */}
+                          {index === 0 && itemIndex === 1 && (
+                            <a
+                              href="https://prode-comunitario.mas10.ar/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="w-full border-2 border-green-600 text-green-600 bg-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-green-50 transition-colors duration-200 mt-2 text-center"
+                            >
+                              Ver próxima competencia
+                            </a>
+                          )}
+                          {/* Ejemplos de cobertura de prensa (Socios, item 3) */}
+                          {index === 0 && itemIndex === 2 && (
+                            <div className="mt-4">
+                              <p className="text-sm font-semibold text-gray-700 mb-3 text-center">
+                                Ejemplos de cobertura de prensa:
+                              </p>
+                              <div className="grid grid-cols-2 gap-3">
+                                <a
+                                  href="https://golpopular.com/2025/08/05/entrevista-gol-popular-union-y-justicia-el-camino-al-campeonato-en-la-35-de-level/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="flex flex-col items-center justify-center p-3 bg-gray-50 rounded-lg border-2 border-gray-200 hover:border-green-600 hover:bg-green-50 transition-all duration-200 group"
+                                  title="Ver cobertura de Unión y Justicia en Gol Popular"
+                                >
+                                  <div className="w-12 h-12 mb-2 flex items-center justify-center">
+                                    <img 
+                                      src="/img/uj.png" 
+                                      alt="Unión y Justicia" 
+                                      className="w-full h-full object-cover rounded-full"
+                                      onError={(e) => {
+                                        const target = e.target as HTMLImageElement;
+                                        target.style.display = 'none';
+                                        const parent = target.parentElement!;
+                                        if (!parent.querySelector('.fallback')) {
+                                          parent.innerHTML = '<div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center fallback"><span class="text-white font-bold text-xs">UJ</span></div>';
+                                        }
+                                      }}
+                                    />
+                                  </div>
+                                  <span className="text-xs text-gray-700 group-hover:text-green-600 font-medium text-center leading-tight">
+                                    Unión y Justicia
+                                  </span>
+                                </a>
+                                <a
+                                  href="https://golpopular.com/2024/10/04/fecha-8-del-clausura-de-cruz-del-sur-flamengo-jr-y-santa-suerte-marcan-la-pelea-por-el-titulo-2/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="flex flex-col items-center justify-center p-3 bg-gray-50 rounded-lg border-2 border-gray-200 hover:border-green-600 hover:bg-green-50 transition-all duration-200 group"
+                                  title="Ver cobertura de Flamengo Jr en Gol Popular"
+                                >
+                                  <div className="w-12 h-12 mb-2 flex items-center justify-center">
+                                    <img 
+                                      src="/img/fr.png" 
+                                      alt="Flamengo Jr" 
+                                      className="w-full h-full object-cover rounded-full"
+                                      onError={(e) => {
+                                        const target = e.target as HTMLImageElement;
+                                        target.style.display = 'none';
+                                        const parent = target.parentElement!;
+                                        if (!parent.querySelector('.fallback')) {
+                                          parent.innerHTML = '<div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center fallback"><span class="text-white font-bold text-xs">FJ</span></div>';
+                                        }
+                                      }}
+                                    />
+                                  </div>
+                                  <span className="text-xs text-gray-700 group-hover:text-green-600 font-medium text-center leading-tight">
+                                    Flamengo Jr
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          )}
+                          {/* Crecer entre todos (Comunidad, item 3) */}
+                          {index === 2 && itemIndex === 2 && (
+                            <div className="mt-4">
+                              <p className="text-sm font-semibold text-gray-700 mb-3 text-center">
+                                Crecer entre todos:
+                              </p>
+                              <div className="flex flex-col gap-3">
+                                <a
+                                  href="https://protorneos.com/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg border-2 border-gray-200 hover:border-purple-600 hover:bg-purple-50 transition-all duration-200 group"
+                                  title="Ver ProTorneos"
+                                >
+                                  <div className="h-12 flex-shrink-0 flex items-center justify-center">
+                                    <img 
+                                      src="/img/pt-logo.png" 
+                                      alt="ProTorneos" 
+                                      className="h-full w-auto object-contain"
+                                      onError={(e) => {
+                                        const target = e.target as HTMLImageElement;
+                                        target.style.display = 'none';
+                                        const parent = target.parentElement!;
+                                        if (!parent.querySelector('.fallback')) {
+                                          parent.innerHTML = '<div class="h-12 bg-purple-600 rounded flex items-center justify-center px-3 fallback"><span class="text-white font-bold text-xs">PT</span></div>';
+                                        }
+                                      }}
+                                    />
+                                  </div>
+                                  <div className="flex-1 min-w-0">
+                                    <span className="text-sm text-gray-700 group-hover:text-purple-600 font-semibold block leading-tight">
+                                      ProTorneos
+                                    </span>
+                                    <span className="text-xs text-gray-600 leading-tight mt-1 block">
+                                      Invitá a tu torneo u organizá tu propio torneo
+                                    </span>
+                                  </div>
+                                </a>
+                                <a
+                                  href="https://mas10.ar/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg border-2 border-gray-200 hover:border-purple-600 hover:bg-purple-50 transition-all duration-200 group"
+                                  title="Ver App +10"
+                                >
+                                  <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center">
+                                    <img 
+                                      src="/img/m10-logo.png" 
+                                      alt="+10 App" 
+                                      className="w-full h-full object-cover rounded-full"
+                                      onError={(e) => {
+                                        const target = e.target as HTMLImageElement;
+                                        target.style.display = 'none';
+                                        const parent = target.parentElement!;
+                                        if (!parent.querySelector('.fallback')) {
+                                          parent.innerHTML = '<div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center fallback"><span class="text-white font-bold text-xs">+10</span></div>';
+                                        }
+                                      }}
+                                    />
+                                  </div>
+                                  <div className="flex-1 min-w-0">
+                                    <span className="text-sm text-gray-700 group-hover:text-purple-600 font-semibold block leading-tight">
+                                      +10
+                                    </span>
+                                    <span className="text-xs text-gray-600 leading-tight mt-1 block">
+                                      Tu app con todo el fútbol que jugamos todos
+                                    </span>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -197,6 +415,11 @@ export default function BeneficiosGolazos() {
       <RecaudacionEquipoModal 
         isOpen={isRecaudacionEquipoModalOpen} 
         onClose={() => setIsRecaudacionEquipoModalOpen(false)} 
+      />
+
+      <NivelesEquipoModal 
+        isOpen={isNivelesEquipoModalOpen} 
+        onClose={() => setIsNivelesEquipoModalOpen(false)} 
       />
     </section>
   );

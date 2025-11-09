@@ -42,8 +42,8 @@ export default function SponsorsTeaser() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               </div>
-              <h3 className="font-semibold text-white mb-2">Visibilidad Premium</h3>
-              <p className="text-gray-400 text-sm">Máxima exposición en todas las plataformas</p>
+              <h3 className="font-semibold text-white mb-2">Hacerse conocido</h3>
+              <p className="text-gray-400 text-sm">Máxima exposición para las marcas que te acompañan</p>
             </div>
             
             <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
@@ -52,7 +52,7 @@ export default function SponsorsTeaser() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               </div>
-              <h3 className="font-semibold text-white mb-2">Analytics Detallados</h3>
+              <h3 className="font-semibold text-white mb-2">Medición de impacto</h3>
               <p className="text-gray-400 text-sm">Métricas completas de impacto y alcance</p>
             </div>
             
