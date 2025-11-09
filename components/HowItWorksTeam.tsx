@@ -68,7 +68,7 @@ export default function HowItWorksTeam() {
               >
                 {/* Step number */}
                 <div className={`flex items-center justify-center w-12 h-12 text-white rounded-full text-xl font-bold mb-4 group-hover:scale-110 transition-transform duration-200 ${
-                  index === 0 ? 'bg-red-600' : 'bg-primary-600'
+                  index === 0 ? 'bg-green-600' : 'bg-primary-600'
                 }`}>
                   {index + 1}
                 </div>
