@@ -1,6 +1,7 @@
 import HeroCoquitas from '@/components/HeroCoquitas';
 import HowItWorksTeam from '@/components/HowItWorksTeam';
 import TresSimplesPasos from '@/components/TresSimplesPasos';
+import BeneficiosGolazos from '@/components/BeneficiosGolazos';
 import BenefitsUnified from '@/components/BenefitsUnified';
 import CoquitaCalculator from '@/components/CoquitaCalculator';
 import ProdeConnector from '@/components/ProdeConnector';
@@ -15,8 +16,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       <HeroCoquitas />
-      <HowItWorksTeam />
       <TresSimplesPasos />
+      <BeneficiosGolazos />
       <BenefitsUnified />
       <CoquitaCalculator />
       <ProdeConnector />
@@ -24,6 +25,7 @@ export default function Home() {
       <UseCasesGrid />
       <FAQCoquitas />
       <FinalCTA />
+      <HowItWorksTeam />
       
       {/* Global Components */}
       <LeadModal />
