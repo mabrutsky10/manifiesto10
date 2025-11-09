@@ -73,7 +73,7 @@ export default function CalculadoraModal({ isOpen, onClose }: CalculadoraModalPr
             <div className="mb-8">
               <div className="bg-primary-50 border-l-4 border-primary-600 p-6 rounded-r-lg mb-6">
                 <p className="text-gray-800 leading-relaxed text-lg">
-                  La <strong className="text-primary-700">Calculadora Recaudadora</strong> te permite estimar cuánto dinero podés recaudar mensualmente con tu programa de "Cuota Social Amateur".
+                  La <strong className="text-primary-700">Calculadora Recaudadora</strong> te permite estimar cuánto dinero podés recaudar mensualmente con tu programa de &quot;Cuota Social Amateur&quot;.
                 </p>
               </div>
 
