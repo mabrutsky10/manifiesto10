@@ -1,8 +1,21 @@
 'use client';
 
+import { useState } from 'react';
 import { CONTENT } from '@/lib/constants';
+import CreateTeamModal from './CreateTeamModal';
+import CuotaSocialModal from './CuotaSocialModal';
+import CampanaSociosModal from './CampanaSociosModal';
+import PremiosModal from './PremiosModal';
+import RecaudarCuotasModal from './RecaudarCuotasModal';
+import CalculadoraModal from './CalculadoraModal';
 
 export default function HowItWorksTeam() {
+  const [isCreateTeamModalOpen, setIsCreateTeamModalOpen] = useState(false);
+  const [isCuotaSocialModalOpen, setIsCuotaSocialModalOpen] = useState(false);
+  const [isCampanaSociosModalOpen, setIsCampanaSociosModalOpen] = useState(false);
+  const [isPremiosModalOpen, setIsPremiosModalOpen] = useState(false);
+  const [isRecaudarCuotasModalOpen, setIsRecaudarCuotasModalOpen] = useState(false);
+  const [isCalculadoraModalOpen, setIsCalculadoraModalOpen] = useState(false);
   const handleCTAClick = (ctaText: string, stepIndex: number) => {
     // Track the CTA click
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -15,38 +28,22 @@ export default function HowItWorksTeam() {
     // Handle specific CTAs
     switch (stepIndex) {
       case 0: // Crear Equipo +10
-        window.open('https://plus10.com.ar', '_blank', 'noopener,noreferrer');
+        setIsCreateTeamModalOpen(true);
         break;
       case 1: // Cuota Social Mínima $3500
-        // Scroll to calculator
-        const calculatorElement = document.getElementById('calculator');
-        if (calculatorElement) {
-          calculatorElement.scrollIntoView({ behavior: 'smooth' });
-        }
+        setIsCuotaSocialModalOpen(true);
         break;
-      case 2: // Al asociarse te apoyan y siguen todas tus novedades
-        // Open lead modal for team creation
-        const event = new CustomEvent('openLeadModal', { 
-          detail: { type: 'CREATE_PROGRAM' } 
-        });
-        window.dispatchEvent(event);
+      case 2: // Comenzar campaña de socios
+        setIsCampanaSociosModalOpen(true);
         break;
-      case 3: // Ver premios vigentes
-        window.open('https://prode.com.ar', '_blank', 'noopener,noreferrer');
+      case 3: // Premios Vigentes para Socios
+        setIsPremiosModalOpen(true);
         break;
       case 4: // Recaudar las cuotas mes a mes
-        // Open lead modal for collection info
-        const event2 = new CustomEvent('openLeadModal', { 
-          detail: { type: 'CREATE_PROGRAM' } 
-        });
-        window.dispatchEvent(event2);
+        setIsRecaudarCuotasModalOpen(true);
         break;
       case 5: // Calculadora Recaudadora
-        // Scroll to calculator
-        const calculatorElement2 = document.getElementById('calculator');
-        if (calculatorElement2) {
-          calculatorElement2.scrollIntoView({ behavior: 'smooth' });
-        }
+        setIsCalculadoraModalOpen(true);
         break;
       default:
         break;
@@ -70,7 +67,9 @@ export default function HowItWorksTeam() {
                 className="relative flex-1 flex flex-col items-center text-center"
               >
                 {/* Step number */}
-                <div className="flex items-center justify-center w-12 h-12 bg-primary-600 text-white rounded-full text-xl font-bold mb-4 group-hover:scale-110 transition-transform duration-200">
+                <div className={`flex items-center justify-center w-12 h-12 text-white rounded-full text-xl font-bold mb-4 group-hover:scale-110 transition-transform duration-200 ${
+                  index === 0 ? 'bg-red-600' : 'bg-primary-600'
+                }`}>
                   {index + 1}
                 </div>
                 
@@ -110,6 +109,42 @@ export default function HowItWorksTeam() {
           </div>
         </div>
       </div>
+
+      {/* Create Team Modal */}
+      <CreateTeamModal 
+        isOpen={isCreateTeamModalOpen} 
+        onClose={() => setIsCreateTeamModalOpen(false)} 
+      />
+
+      {/* Cuota Social Modal */}
+      <CuotaSocialModal 
+        isOpen={isCuotaSocialModalOpen} 
+        onClose={() => setIsCuotaSocialModalOpen(false)} 
+      />
+
+      {/* Campaña Socios Modal */}
+      <CampanaSociosModal 
+        isOpen={isCampanaSociosModalOpen} 
+        onClose={() => setIsCampanaSociosModalOpen(false)} 
+      />
+
+      {/* Premios Modal */}
+      <PremiosModal 
+        isOpen={isPremiosModalOpen} 
+        onClose={() => setIsPremiosModalOpen(false)} 
+      />
+
+      {/* Recaudar Cuotas Modal */}
+      <RecaudarCuotasModal 
+        isOpen={isRecaudarCuotasModalOpen} 
+        onClose={() => setIsRecaudarCuotasModalOpen(false)} 
+      />
+
+      {/* Calculadora Modal */}
+      <CalculadoraModal 
+        isOpen={isCalculadoraModalOpen} 
+        onClose={() => setIsCalculadoraModalOpen(false)} 
+      />
     </section>
   );
 }
