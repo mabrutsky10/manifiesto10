@@ -42,8 +42,9 @@ export const LEAD_MODAL_TYPES = {
 // Content texts (Spanish as default)
 export const CONTENT = {
   hero: {
-    title: 'Financiá tu equipo con "Cuota Social Amateur"',
-    subtitle: 'Convocá a tus amigos, familiares y cercanos: cada socio aporta desde "lo que vale una coquita" apoyando a que juegues al fútbol, y tienen muchísimos beneficios y premios.',
+    title: 'Socios para tu equipo de fútbol',
+    subtitle: 'Financiá tu equipo con "Cuota Social Amateur"',
+    description: 'Convocá a tus amigos, familiares y cercanos: cada socio aporta desde "lo que vale una coquita" apoyando a que juegues al fútbol, mientras participan por premios fabulosos y accede a muchísimos beneficios.',
     ctaPrimary: 'Cómo funciona',
     ctaSecondary: 'Calculadora Recaudadora',
     note: 'Próximamente: propuesta completa para Sponsors',
