@@ -99,7 +99,7 @@ export default function HeroCoquitas() {
             {/* Manifiesto Link */}
             <div className="mt-4">
               <Link 
-                href="/manifiesto"
+                href="/"
                 className="inline-flex items-center gap-2 text-sm text-primary-600 hover:text-primary-700 font-semibold transition-colors duration-200"
               >
                 <span>Conocer el Manifiesto +10</span>
