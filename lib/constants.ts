@@ -42,8 +42,8 @@ export const LEAD_MODAL_TYPES = {
 // Content texts (Spanish as default)
 export const CONTENT = {
   hero: {
-    title: 'Socios para tu equipo de fútbol',
-    subtitle: 'Financiá tu equipo con "Cuota Social Amateur"',
+    title: 'Transformá tu equipo amateur en un proyecto profesional',
+    subtitle: 'Con +10, tu equipo tiene las mismas herramientas que los clubes profesionales',
     description: 'Convocá a tus amigos, familiares y cercanos: cada socio aporta desde "lo que vale una coquita" apoyando a que juegues al fútbol, mientras participan por premios fabulosos y accede a muchísimos beneficios.',
     ctaPrimary: 'Cómo funciona',
     ctaSecondary: 'Calculadora Recaudadora',
@@ -185,6 +185,138 @@ export const CONTENT = {
     cta: 'Crear programa Coquita',
   },
 } as const;
+
+// Carousel slides data
+export const CAROUSEL_SLIDES = [
+  {
+    id: 1,
+    title: 'Tu perfil de jugador como los de la Copa del Mundo',
+    subtitle: 'De la figurita Panini a tu foto figura profesional',
+    description: 'Cada jugador tiene su perfil profesional con estadísticas, foto de alta calidad y datos completos, igual que los jugadores de la selección',
+    amateurSide: {
+      label: 'AMATEUR',
+      image: '/img/figurita-panini.png', // Placeholder - needs actual image
+      text: 'Figurita tradicional',
+      bgColor: 'bg-gray-200',
+    },
+    professionalSide: {
+      label: 'CON +10',
+      image: '/img/perfil-profesional.png', // Placeholder - needs actual image
+      text: 'Perfil profesional como en la Copa del Mundo',
+      bgColor: 'bg-primary-100',
+    },
+    cta: {
+      text: 'Ver ejemplo de perfil profesional',
+      action: 'viewProfile',
+    },
+  },
+  {
+    id: 2,
+    title: 'Tu web de equipo como la del Manchester City',
+    subtitle: 'De la web básica a una experiencia profesional',
+    description: 'Cada jugador tiene su foto figura profesional en la web de tu equipo. Estadísticas, resultados, noticias y cobertura de prensa integrada',
+    amateurSide: {
+      label: 'AMATEUR',
+      image: '/img/web-amateur.png', // Placeholder - needs actual image
+      text: 'Web amateur tradicional',
+      bgColor: 'bg-gray-200',
+    },
+    professionalSide: {
+      label: 'CON +10',
+      image: '/img/web-profesional.png', // Placeholder - needs actual image
+      text: 'Web profesional como Manchester City',
+      bgColor: 'bg-blue-100',
+    },
+    cta: {
+      text: 'Ver ejemplo de web profesional',
+      action: 'viewWeb',
+    },
+  },
+  {
+    id: 3,
+    title: 'Cobertura de prensa como ESPN',
+    subtitle: 'Gol Popular, el ESPN del fútbol amateur, cubre tu equipo',
+    description: 'Tu equipo recibe cobertura profesional de prensa, notas, entrevistas y hasta un periodista virtual dedicado. La misma calidad que ESPN pero para el fútbol que jugamos todos',
+    amateurSide: {
+      label: 'AMATEUR',
+      image: '/img/gol-popular.png', // Placeholder - needs actual image
+      text: 'Cobertura amateur',
+      bgColor: 'bg-gray-200',
+    },
+    professionalSide: {
+      label: 'CON +10',
+      image: '/img/espn.png', // Placeholder - needs actual image
+      text: 'Cobertura profesional',
+      bgColor: 'bg-red-100',
+    },
+    cta: {
+      text: 'Ver ejemplos de cobertura',
+      action: 'viewCoverage',
+    },
+  },
+  {
+    id: 4,
+    title: 'Plan de Socios: recaudación mensual estable',
+    subtitle: 'Financiá tu equipo con el apoyo de tu comunidad',
+    description: 'Cada socio aporta "lo que vale una coquita" por mes. Con 20 jugadores y 7 socios cada uno, recaudás $448,000 mensuales. Elegí entre 70% en efectivo o 90% en crédito para vestuario',
+    amateurSide: {
+      label: 'SIN SOCIOS',
+      image: null,
+      text: 'Sin financiamiento estable',
+      bgColor: 'bg-gray-200',
+      value: '$0',
+    },
+    professionalSide: {
+      label: 'CON SOCIOS',
+      image: null,
+      text: 'Recaudación mensual',
+      bgColor: 'bg-green-100',
+      value: '$448,000/mes',
+      breakdown: '20 jugadores × 7 socios = 140 socios × $3,200',
+      options: ['70% efectivo', '90% crédito vestuario'],
+    },
+    cta: {
+      text: 'Calcular mi recaudación',
+      action: 'calculate',
+    },
+  },
+  {
+    id: 5,
+    title: 'Niveles de profesionalismo: crecé con tu equipo',
+    subtitle: 'Más socios = más beneficios y herramientas profesionales',
+    description: 'A medida que sumás socios, desbloqueás nuevos niveles con beneficios exclusivos: preparador físico virtual, convenios con marcas, herramientas avanzadas y mucho más',
+    levels: [
+      {
+        name: 'Básico',
+        range: '0-10 socios',
+        color: 'bg-gray-400',
+        benefits: ['Perfil básico', 'Web del equipo'],
+      },
+      {
+        name: 'Profesional',
+        range: '11+ socios',
+        color: 'bg-blue-600',
+        benefits: ['Preparador físico virtual', 'Yerba Mate Tribunera', 'Herramientas avanzadas'],
+      },
+      {
+        name: 'Élite',
+        range: '25+ socios',
+        color: 'bg-yellow-500',
+        benefits: ['Beneficios premium', 'Sponsors exclusivos'],
+      },
+      {
+        name: 'Leyenda',
+        range: '50+ socios',
+        color: 'bg-purple-600',
+        benefits: ['Beneficios premium', 'Máxima visibilidad'],
+      },
+    ],
+    cta: {
+      text: 'Ver todos los niveles',
+      action: 'viewLevels',
+    },
+  },
+] as const;
 
 // SEO Configuration
 export const SEO_CONFIG = {

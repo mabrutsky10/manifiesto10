@@ -1,0 +1,428 @@
+# PROMPT DETALLADO: NUEVA LANDING PAGE SOCIOS COQUITAS
+
+## CONTEXTO Y BASE ACTUAL
+
+La landing actual (`/app/page.tsx`) tiene esta estructura:
+- HeroCoquitas (hero con video)
+- TresSimplesPasos (3 pasos)
+- BeneficiosGolazos (3 beneficios: Socios, Equipo, Comunidad)
+- CoquitaCalculator (calculadora)
+- SponsorsTeaser
+- FAQCoquitas
+- FinalCTA
+
+Stack: Next.js 14 (App Router), React 18, TypeScript, Tailwind CSS.
+
+---
+
+## CAMBIOS PRINCIPALES SOLICITADOS
+
+### 1. CAROUSEL DE BENEFICIOS EN EL HOME
+
+Reemplazar la sección de beneficios actual por un carousel visual que compare amateur vs profesional.
+
+#### Especificaciones del carousel
+
+- Tipo: carousel horizontal con navegación por flechas, dots y swipe (touch)
+- Autoplay: opcional, pausa al hover
+- Transiciones: fade + slide (0.5s ease-in-out)
+- Responsive: mobile-first, adaptativo
+- Accesibilidad: ARIA labels, navegación por teclado, indicadores de slide actual
+
+#### SLIDE 1: Perfil de jugador (Copa del Mundo vs Amateur)
+
+Diseño:
+- Layout dividido verticalmente (50/50 o 60/40)
+- Lado izquierdo: "AMATEUR" (fondo gris claro)
+  - Figurita Panini estilo vintage
+  - Diseño simple, colores básicos
+  - Texto: "Figurita tradicional"
+- Lado derecho: "CON +10" (fondo verde/azul)
+  - Foto figura profesional estilo Copa del Mundo
+  - Diseño moderno, efectos visuales
+  - Texto: "Perfil profesional como en la Copa del Mundo"
+
+Contenido:
+- Título: "Tu perfil de jugador como los de la Copa del Mundo"
+- Subtítulo: "De la figurita Panini a tu foto figura profesional"
+- Descripción: "Cada jugador tiene su perfil profesional con estadísticas, foto de alta calidad y datos completos, igual que los jugadores de la selección"
+- CTA: "Ver ejemplo de perfil profesional"
+
+Elementos visuales:
+- División clara con línea vertical o gradiente
+- Badge "AMATEUR" vs "PROFESIONAL"
+- Iconos: figurita vs perfil digital
+- Animación sutil al cargar
+
+---
+
+#### SLIDE 2: Web del equipo (Manchester City vs Amateur)
+
+Diseño:
+- Layout dividido (50/50)
+- Lado izquierdo: "AMATEUR" (fondo gris)
+  - Captura de pantalla o mockup de web amateur (ej: "Unión y Justicia")
+  - Diseño básico, sin estructura profesional
+  - Texto: "Web amateur tradicional"
+- Lado derecho: "CON +10" (fondo azul)
+  - Captura o mockup estilo Manchester City
+  - Diseño profesional, moderna, con fotos figura de cada jugador
+  - Texto: "Web profesional como Manchester City"
+
+Contenido:
+- Título: "Tu web de equipo como la del Manchester City"
+- Subtítulo: "De la web básica a una experiencia profesional"
+- Descripción: "Cada jugador tiene su foto figura profesional en la web de tu equipo. Estadísticas, resultados, noticias y cobertura de prensa integrada"
+- CTA: "Ver ejemplo de web profesional"
+
+Elementos visuales:
+- Mockups side-by-side
+- Badge "AMATEUR" vs "PROFESIONAL"
+- Grid de jugadores con fotos figura
+- Hover effects en las imágenes
+
+---
+
+#### SLIDE 3: Cobertura de prensa (ESPN vs Gol Popular)
+
+Diseño:
+- Layout dividido (50/50)
+- Lado izquierdo: "AMATEUR" (fondo gris)
+  - Logo/mockup de "Gol Popular" (el ESPN del fútbol amateur)
+  - Texto: "Cobertura amateur"
+- Lado derecho: "CON +10" (fondo rojo/naranja estilo ESPN)
+  - Logo/mockup de ESPN
+  - Texto: "Cobertura profesional"
+
+Contenido:
+- Título: "Cobertura de prensa como ESPN"
+- Subtítulo: "Gol Popular, el ESPN del fútbol amateur, cubre tu equipo"
+- Descripción: "Tu equipo recibe cobertura profesional de prensa, notas, entrevistas y hasta un periodista virtual dedicado. La misma calidad que ESPN pero para el fútbol que jugamos todos"
+- CTA: "Ver ejemplos de cobertura"
+
+Elementos visuales:
+- Logos de Gol Popular y ESPN
+- Mockups de artículos/notas
+- Badge "AMATEUR" vs "PROFESIONAL"
+- Iconos de periodismo/prensa
+
+---
+
+#### SLIDE 4: Plan de Socios y ejemplo de recaudación
+
+Diseño:
+- Layout centrado con comparación visual
+- Lado izquierdo: "SIN SOCIOS" (fondo gris)
+  - Gráfico simple mostrando $0
+  - Texto: "Sin financiamiento estable"
+- Lado derecho: "CON SOCIOS" (fondo verde)
+  - Gráfico de recaudación mensual
+  - Ejemplo: "20 jugadores × 7 socios = 140 socios × $3,200 = $448,000/mes"
+  - Desglose: 70% efectivo o 90% crédito vestuario
+
+Contenido:
+- Título: "Plan de Socios: recaudación mensual estable"
+- Subtítulo: "Financiá tu equipo con el apoyo de tu comunidad"
+- Descripción: "Cada socio aporta 'lo que vale una coquita' por mes. Con 20 jugadores y 7 socios cada uno, recaudás $448,000 mensuales. Elegí entre 70% en efectivo o 90% en crédito para vestuario"
+- CTA: "Calcular mi recaudación"
+
+Elementos visuales:
+- Gráfico de barras comparativo
+- Números grandes y destacados
+- Calculadora inline o link a calculadora completa
+- Iconos de dinero/recursos
+
+---
+
+#### SLIDE 5: Niveles de profesionalismo
+
+Diseño:
+- Layout tipo "roadmap" o niveles tipo videojuego
+- Progresión visual de niveles
+- Nivel 1: "Básico" (0-10 socios) - gris
+- Nivel 2: "Profesional" (11+ socios) - azul
+  - Desbloquea: Preparador físico virtual, Yerba Mate Tribunera, etc.
+- Nivel 3: "Élite" (25+ socios) - dorado
+  - Más beneficios
+- Nivel 4: "Leyenda" (50+ socios) - púrpura
+  - Beneficios premium
+
+Contenido:
+- Título: "Niveles de profesionalismo: crecé con tu equipo"
+- Subtítulo: "Más socios = más beneficios y herramientas profesionales"
+- Descripción: "A medida que sumás socios, desbloqueás nuevos niveles con beneficios exclusivos: preparador físico virtual, convenios con marcas, herramientas avanzadas y mucho más"
+- CTA: "Ver todos los niveles"
+
+Elementos visuales:
+- Roadmap visual con niveles
+- Badges de nivel
+- Iconos de beneficios por nivel
+- Barra de progreso
+- Animación de desbloqueo
+
+---
+
+### 2. ESTRUCTURA SIMPLIFICADA DE PASOS
+
+Reemplazar "TresSimplesPasos" por una versión más simple y visual.
+
+#### Nueva sección: "3 Pasos Simples"
+
+Diseño:
+- Cards horizontales o verticales (según dispositivo)
+- Numeración grande y visible
+- Iconos por paso
+- CTAs claros
+
+Paso 1: "Creá tu equipo en +10"
+- Icono: equipo/escudo
+- Descripción breve
+- CTA: "Crear equipo"
+
+Paso 2: "Lanzá tu campaña de socios"
+- Icono: personas/socios
+- Descripción breve
+- CTA: "Comenzar campaña"
+
+Paso 3: "Recaudá y crecé"
+- Icono: crecimiento/gráfico
+- Descripción breve
+- CTA: "Calcular recaudación"
+
+---
+
+### 3. MEJORAS DE UX/UI DE LA INDUSTRIA
+
+#### Patrones de conversión
+
+1. Above the fold
+   - Hero con valor claro
+   - CTA principal visible sin scroll
+   - Social proof (testimonios, números)
+
+2. Progresión visual
+   - Scroll indicators
+   - Secciones con transiciones suaves
+   - Micro-animaciones
+
+3. Trust signals
+   - Logos de partners (Mercado Pago, WhatsApp)
+   - Testimonios o casos de éxito
+   - Garantías (cancelación libre, pagos seguros)
+
+4. Urgencia y escasez (opcional)
+   - "Únete a X equipos que ya están creciendo"
+   - Contador de equipos activos
+
+5. Reducción de fricción
+   - Formularios cortos
+   - Múltiples puntos de entrada (CTAs)
+   - Opción de WhatsApp directo
+
+#### Mejoras visuales
+
+1. Jerarquía visual
+   - Tipografía: tamaños claros (H1: 48-64px, H2: 36-48px)
+   - Espaciado: secciones con padding generoso (py-16 md:py-24)
+   - Contraste: texto legible (WCAG AA)
+
+2. Colores y branding
+   - Paleta consistente (primary-600, green-600, etc.)
+   - Gradientes sutiles
+   - Estados hover claros
+
+3. Componentes interactivos
+   - Botones con estados (hover, active, disabled)
+   - Transiciones suaves (200-300ms)
+   - Feedback visual inmediato
+
+4. Responsive design
+   - Mobile-first
+   - Breakpoints: sm (640px), md (768px), lg (1024px), xl (1280px)
+   - Touch-friendly (botones min 44x44px)
+
+5. Performance
+   - Lazy loading de imágenes
+   - Optimización de carousel (virtualización si hay muchos slides)
+   - Debounce en interacciones
+
+---
+
+## ESPECIFICACIONES TÉCNICAS
+
+### Componentes a crear/modificar
+
+1. `components/BeneficiosCarousel.tsx` (nuevo)
+   - Carousel con 5 slides
+   - Navegación (flechas, dots, swipe)
+   - Autoplay opcional
+   - Responsive
+
+2. `components/PasosSimplificados.tsx` (reemplaza TresSimplesPasos)
+   - 3 pasos simples
+   - Diseño limpio
+   - CTAs integrados
+
+3. Modificar `app/page.tsx`
+   - Reemplazar BeneficiosGolazos por BeneficiosCarousel
+   - Reemplazar TresSimplesPasos por PasosSimplificados
+   - Mantener resto de secciones
+
+### Librerías sugeridas
+
+- Carousel: `embla-carousel-react` o `swiper/react`
+- Animaciones: `framer-motion` (opcional)
+- Iconos: `lucide-react` (ya en uso)
+
+### Estructura de datos
+
+```typescript
+// lib/constants.ts - Agregar
+export const CAROUSEL_SLIDES = [
+  {
+    id: 1,
+    title: "Tu perfil de jugador como los de la Copa del Mundo",
+    subtitle: "De la figurita Panini a tu foto figura profesional",
+    description: "...",
+    amateurSide: {
+      label: "AMATEUR",
+      image: "/img/figurita-panini.png",
+      text: "Figurita tradicional"
+    },
+    professionalSide: {
+      label: "CON +10",
+      image: "/img/perfil-profesional.png",
+      text: "Perfil profesional como en la Copa del Mundo"
+    },
+    cta: {
+      text: "Ver ejemplo de perfil profesional",
+      action: "viewProfile"
+    }
+  },
+  // ... más slides
+];
+```
+
+---
+
+## DISEÑO VISUAL DETALLADO
+
+### Carousel: estilos y comportamiento
+
+- Contenedor: `max-w-7xl mx-auto`, padding responsive
+- Slide: `min-h-[500px] md:min-h-[600px]`, flex column
+- División amateur/profesional:
+  - Desktop: grid 2 columnas (50/50 o 60/40)
+  - Mobile: stack vertical
+- Comparación visual:
+  - Línea divisoria o gradiente
+  - Badges "AMATEUR" vs "PROFESIONAL"
+  - Efectos hover en imágenes
+
+### Navegación del carousel
+
+- Flechas: laterales, visibles en hover
+- Dots: bottom center, indicador activo
+- Swipe: habilitado en mobile
+- Keyboard: arrow keys para navegar
+
+### Pasos simplificados
+
+- Layout: grid 3 columnas (desktop), 1 columna (mobile)
+- Card: `rounded-2xl shadow-lg`, hover effect
+- Numeración: badge circular grande (top)
+- Icono: centrado, tamaño mediano
+- CTA: botón full-width en cada card
+
+---
+
+## CONTENIDO Y COPY
+
+### Tono de voz
+
+- Conversacional y cercano
+- Enfocado en beneficios
+- Comparación clara amateur vs profesional
+- Llamados a la acción directos
+
+### Textos sugeridos
+
+Hero:
+- Título: "Transformá tu equipo amateur en un proyecto profesional"
+- Subtítulo: "Con +10, tu equipo tiene las mismas herramientas que los clubes profesionales"
+
+Carousel:
+- Slide 1: "Tu perfil de jugador como los de la Copa del Mundo"
+- Slide 2: "Tu web de equipo como la del Manchester City"
+- Slide 3: "Cobertura de prensa como ESPN"
+- Slide 4: "Plan de Socios: recaudación mensual estable"
+- Slide 5: "Niveles de profesionalismo: crecé con tu equipo"
+
+---
+
+## CHECKLIST DE IMPLEMENTACIÓN
+
+### Fase 1: Carousel de beneficios
+- [ ] Crear componente BeneficiosCarousel
+- [ ] Implementar 5 slides con diseño dividido
+- [ ] Agregar navegación (flechas, dots, swipe)
+- [ ] Implementar responsive design
+- [ ] Agregar animaciones y transiciones
+- [ ] Testing en diferentes dispositivos
+
+### Fase 2: Pasos simplificados
+- [ ] Crear componente PasosSimplificados
+- [ ] Diseñar 3 cards simples
+- [ ] Integrar CTAs
+- [ ] Testing responsive
+
+### Fase 3: Mejoras UX/UI
+- [ ] Optimizar above the fold
+- [ ] Agregar trust signals
+- [ ] Mejorar jerarquía visual
+- [ ] Optimizar performance
+- [ ] Testing de accesibilidad
+
+### Fase 4: Integración
+- [ ] Actualizar app/page.tsx
+- [ ] Actualizar constants.ts
+- [ ] Testing end-to-end
+- [ ] Optimización SEO
+- [ ] Deploy y testing en producción
+
+---
+
+## NOTAS ADICIONALES
+
+1. Imágenes necesarias:
+   - Figurita Panini (mockup o ilustración)
+   - Perfil profesional estilo Copa del Mundo
+   - Mockup web Manchester City
+   - Mockup web amateur (Unión y Justicia)
+   - Logos Gol Popular y ESPN
+   - Gráficos de recaudación
+
+2. Mantener funcionalidad existente:
+   - Calculadora
+   - Modales
+   - Tracking GA4
+   - Formularios de leads
+
+3. Performance:
+   - Lazy load del carousel
+   - Optimizar imágenes (WebP, lazy loading)
+   - Code splitting si es necesario
+
+4. Accesibilidad:
+   - ARIA labels en carousel
+   - Navegación por teclado
+   - Screen reader friendly
+   - Contraste de colores
+
+---
+
+Este prompt cubre todos los cambios solicitados. ¿Quieres que profundice en alguna sección o agregue más detalles técnicos?
+
+
+
+

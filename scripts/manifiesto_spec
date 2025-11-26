@@ -1,0 +1,288 @@
+// src/pages/ManifiestoLanding.tsx (o como prefieras organizarlo)
+
+import React from "react";
+
+export const ManifiestoLanding: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-emerald-950 text-slate-50">
+      {/* Navbar */}
+      <header className="border-b border-emerald-800 bg-emerald-950/80 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:py-4">
+          <div className="flex items-center gap-2">
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500 font-bold">
+              +10
+            </div>
+            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-100">
+              Manifiesto
+            </span>
+          </div>
+          <nav className="hidden gap-6 text-sm md:flex">
+            <a href="#manifiesto" className="hover:text-emerald-300">
+              Manifiesto
+            </a>
+            <a href="#dolores" className="hover:text-emerald-300">
+              Dolores
+            </a>
+            <a href="#implementacion" className="hover:text-emerald-300">
+              Implementación
+            </a>
+          </nav>
+          <a
+            href="#cta-final"
+            className="hidden rounded-full border border-emerald-400 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-100 hover:bg-emerald-400 hover:text-emerald-950 md:inline-block"
+          >
+            Sumate a +10
+          </a>
+        </div>
+      </header>
+
+      <main>
+        {/* Hero */}
+        <section className="border-b border-emerald-800 bg-gradient-to-b from-emerald-950 to-emerald-900">
+          <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-12 md:flex-row md:items-center md:py-16">
+            <div className="md:w-1/2">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-300">
+                Fútbol popular
+              </p>
+              <h1 className="mt-3 text-3xl font-bold leading-tight text-emerald-50 md:text-4xl">
+                Manifiesto +10
+              </h1>
+              <p className="mt-4 max-w-md text-sm text-emerald-100/80 md:text-base">
+                Los tres derechos del fútbol que jugamos todos. Una declaración
+                de identidad, conexión y sostenibilidad para los equipos y
+                jugadores que escriben la historia desde el potrero.
+              </p>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <a
+                  href="#cta-final"
+                  className="inline-flex items-center justify-center rounded-full bg-emerald-400 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-950 hover:bg-emerald-300"
+                >
+                  Quiero identidad para mi equipo
+                </a>
+                <a
+                  href="#manifiesto"
+                  className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-200 hover:text-emerald-100"
+                >
+                  Conocer el manifiesto
+                </a>
+              </div>
+            </div>
+
+            <div className="md:w-1/2">
+              <div className="rounded-2xl border border-emerald-700 bg-emerald-900/40 p-5 shadow-lg shadow-emerald-900/60">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300">
+                  El fútbol que jugamos todos merece su lugar
+                </p>
+                <p className="mt-3 text-sm text-emerald-100/90">
+                  En cada potrero, en cada barrio, se juega un fútbol que casi
+                  nunca sale en la tele. El Manifiesto +10 nace para reconocer
+                  a esos equipos, jugadores y comunidades, y darles un espacio
+                  digno dentro del mapa del fútbol.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Manifiesto: tres derechos */}
+        <section id="manifiesto" className="border-b border-emerald-800 bg-emerald-950">
+          <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+            <h2 className="text-xl font-semibold text-emerald-50 md:text-2xl">
+              Los tres derechos del fútbol que jugamos todos
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm text-emerald-100/80">
+              El Manifiesto +10 resume el fútbol popular en tres derechos
+              fundamentales. Son simples de entender y enormes de cumplir:
+              identidad, conexión y sostenibilidad nacidas desde la comunidad.
+            </p>
+
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              {/* Derecho 1 */}
+              <div className="rounded-2xl border border-emerald-800 bg-emerald-900/40 p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300">
+                  Derecho 1
+                </p>
+                <h3 className="mt-2 text-sm font-semibold text-emerald-50">
+                  Derecho a tener identidad
+                </h3>
+                <p className="mt-2 text-xs text-emerald-100/80">
+                  Cada equipo y cada jugador merecen tener su nombre, su escudo,
+                  su historia y su lugar. El fútbol que se juega sin cámaras
+                  también construye cultura y orgullo.
+                </p>
+              </div>
+
+              {/* Derecho 2 */}
+              <div className="rounded-2xl border border-emerald-800 bg-emerald-900/40 p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300">
+                  Derecho 2
+                </p>
+                <h3 className="mt-2 text-sm font-semibold text-emerald-50">
+                  Derecho a conectarse y crecer
+                </h3>
+                <p className="mt-2 text-xs text-emerald-100/80">
+                  Jugadores, equipos y comunidades tienen derecho a encontrarse,
+                  competir, aprender y evolucionar. El fútbol es vínculo,
+                  oportunidad y desarrollo.
+                </p>
+              </div>
+
+              {/* Derecho 3 */}
+              <div className="rounded-2xl border border-emerald-800 bg-emerald-900/40 p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300">
+                  Derecho 3
+                </p>
+                <h3 className="mt-2 text-sm font-semibold text-emerald-50">
+                  Derecho a sostenerse desde la comunidad
+                </h3>
+                <p className="mt-2 text-xs text-emerald-100/80">
+                  Los sueños del potrero también merecen apoyo real. La pasión
+                  puede financiarse entre hinchas, familias y marcas cercanas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Dolores */}
+        <section id="dolores" className="border-b border-emerald-800 bg-emerald-950">
+          <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+            <h2 className="text-xl font-semibold text-emerald-50 md:text-2xl">
+              Los dolores del fútbol amateur
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm text-emerald-100/80">
+              Si estos derechos no se cumplen, es porque hay dolores profundos
+              en el camino. +10 existe para escucharlos y construir soluciones.
+            </p>
+
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              {/* Identidad - dolores */}
+              <div className="rounded-2xl border border-emerald-800 bg-emerald-900/40 p-5">
+                <h3 className="text-sm font-semibold text-emerald-50">
+                  Identidad
+                </h3>
+                <ul className="mt-3 space-y-2 text-xs text-emerald-100/80">
+                  <li>• Equipos y jugadores sin presencia digital.</li>
+                  <li>• Historias que se pierden sin archivo ni estadísticas.</li>
+                  <li>• Ligas que no comunican ni ordenan su información.</li>
+                </ul>
+              </div>
+
+              {/* Conectarse y crecer - dolores */}
+              <div className="rounded-2xl border border-emerald-800 bg-emerald-900/40 p-5">
+                <h3 className="text-sm font-semibold text-emerald-50">
+                  Conectarse y crecer
+                </h3>
+                <ul className="mt-3 space-y-2 text-xs text-emerald-100/80">
+                  <li>• Jugadores sin equipo y equipos sin jugadores.</li>
+                  <li>• Pocas herramientas para gestionar ligas y entrenar.</li>
+                  <li>• Torneos y comunidades aisladas entre sí.</li>
+                </ul>
+              </div>
+
+              {/* Sostenerse - dolores */}
+              <div className="rounded-2xl border border-emerald-800 bg-emerald-900/40 p-5">
+                <h3 className="text-sm font-semibold text-emerald-50">
+                  Sostenerse desde la comunidad
+                </h3>
+                <ul className="mt-3 space-y-2 text-xs text-emerald-100/80">
+                  <li>• Falta de recursos para gastos básicos del equipo.</li>
+                  <li>• Hinchas que quieren ayudar pero no tienen cómo.</li>
+                  <li>• Sponsors locales desconectados del barrio futbolero.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Implementación */}
+        <section
+          id="implementacion"
+          className="border-b border-emerald-800 bg-emerald-900"
+        >
+          <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+            <h2 className="text-xl font-semibold text-emerald-50 md:text-2xl">
+              Implementación +10
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm text-emerald-100/80">
+              El Manifiesto +10 guía cada producto que construimos. Para cada
+              derecho, identificamos dolores concretos y diseñamos herramientas
+              para resolverlos.
+            </p>
+
+            <div className="mt-8 grid gap-8 md:grid-cols-3">
+              {/* Identidad - implementación */}
+              <div>
+                <h3 className="text-sm font-semibold text-emerald-50">
+                  Identidad → Perfil, historia y visibilidad
+                </h3>
+                <ul className="mt-3 space-y-2 text-xs text-emerald-100/80">
+                  <li>• Perfiles de equipos y jugadores con estadísticas.</li>
+                  <li>• Gol Popular: entrevistas, notas y coberturas.</li>
+                  <li>• Registro de goles y partidos como archivo histórico.</li>
+                </ul>
+              </div>
+
+              {/* Conectarse y crecer - implementación */}
+              <div>
+                <h3 className="text-sm font-semibold text-emerald-50">
+                  Conectarse y crecer → Comunidad y herramientas
+                </h3>
+                <ul className="mt-3 space-y-2 text-xs text-emerald-100/80">
+                  <li>• Radar +10: mapa vivo de equipos, jugadores y canchas.</li>
+                  <li>• Mercado de Pases: conexión entre jugadores y clubes.</li>
+                  <li>• ProTorneos y +Trainer: gestión y desarrollo deportivo.</li>
+                </ul>
+              </div>
+
+              {/* Sostenerse - implementación */}
+              <div>
+                <h3 className="text-sm font-semibold text-emerald-50">
+                  Sostenerse desde la comunidad → Microfunding y sponsors
+                </h3>
+                <ul className="mt-3 space-y-2 text-xs text-emerald-100/80">
+                  <li>• Socios Coquita: aporte mensual simbólico de hinchas.</li>
+                  <li>• Sponsors de cercanía: marcas y comercios barriales.</li>
+                  <li>• Activaciones y prodes comunitarios para financiar la pasión.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Cierre / CTA */}
+        <section
+          id="cta-final"
+          className="bg-emerald-950 py-12 md:py-16 border-t border-emerald-800"
+        >
+          <div className="mx-auto max-w-4xl px-4 text-center">
+            <h2 className="text-xl font-semibold text-emerald-50 md:text-2xl">
+              Sumarse al Manifiesto +10 es tomar partido por el fútbol popular
+            </h2>
+            <p className="mt-3 text-sm text-emerald-100/80">
+              Si sos jugador, equipo, liga, marca o simplemente alguien que ama
+              este juego, este manifiesto también es tuyo. +10 nace del potrero
+              y vuelve al potrero: identidad, conexión y comunidad al servicio
+              del fútbol que jugamos todos.
+            </p>
+            <a
+              href="#"
+              className="mt-6 inline-flex items-center justify-center rounded-full bg-emerald-400 px-6 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-950 hover:bg-emerald-300"
+            >
+              Quiero que mi equipo tenga identidad en +10
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer className="border-t border-emerald-800 bg-emerald-950">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 text-[11px] text-emerald-400/80">
+          <span>© {new Date().getFullYear()} +10 · Fútbol que jugamos todos</span>
+          <span>Identidad · Conectarse y crecer · Sostenerse desde la comunidad</span>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default ManifiestoLanding;
