@@ -26,7 +26,7 @@ export default function ImageComparison() {
 
         {/* Image Comparison Slider */}
         <motion.div
-          className="max-w-4xl mx-auto"
+          className="w-full"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
@@ -53,7 +53,7 @@ export default function ImageComparison() {
             </div>
 
             {/* Comparison Slider */}
-            <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+            <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 w-full" style={{ aspectRatio: '16/9' }}>
               <ReactCompareSlider
                 itemOne={
                   <ReactCompareSliderImage
@@ -69,7 +69,7 @@ export default function ImageComparison() {
                 }
                 style={{
                   width: '100%',
-                  height: '500px',
+                  height: '100%',
                 }}
                 position={50}
               />
