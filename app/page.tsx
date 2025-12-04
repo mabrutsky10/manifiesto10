@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
+import ImageComparison from '@/components/ImageComparison';
 
 export default function Home() {
   const currentYear = new Date().getFullYear();
@@ -382,6 +383,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Image Comparison */}
+        <ImageComparison />
 
         {/* Cierre / CTA */}
         <section
