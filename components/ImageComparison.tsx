@@ -57,13 +57,13 @@ export default function ImageComparison() {
               <ReactCompareSlider
                 itemOne={
                   <ReactCompareSliderImage
-                    src="/equipopro.png"
+                    src="/equipopro-2.png"
                     alt="Equipo profesional"
                   />
                 }
                 itemTwo={
                   <ReactCompareSliderImage
-                    src="/equipo10.png"
+                    src="/equipo10-2.png"
                     alt="Equipo amateur con +10"
                   />
                 }

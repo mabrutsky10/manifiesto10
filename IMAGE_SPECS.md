@@ -87,3 +87,4 @@ convert input.png -resize 1920x1080 -gravity center -crop 1920x1080+0+0 output.p
 - Optimizar antes de subir
 - Ambas imágenes deben tener exactamente las mismas dimensiones
 
+
