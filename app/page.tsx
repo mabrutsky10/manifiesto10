@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
 import ImageComparison from '@/components/ImageComparison';
+import PrensaComoUnPro from '@/components/PrensaComoUnPro';
 
 export default function Home() {
   const currentYear = new Date().getFullYear();
@@ -386,6 +387,9 @@ export default function Home() {
 
         {/* Image Comparison */}
         <ImageComparison />
+
+        {/* Prensa como un PRO */}
+        <PrensaComoUnPro />
 
         {/* Cierre / CTA */}
         <section
