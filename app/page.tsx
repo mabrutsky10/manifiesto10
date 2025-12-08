@@ -5,6 +5,7 @@ import { ChevronLeft } from 'lucide-react';
 import ImageComparison from '@/components/ImageComparison';
 import PrensaComoUnPro from '@/components/PrensaComoUnPro';
 import SociosComoUnPro from '@/components/SociosComoUnPro';
+import MercadoDePasesComoUnPro from '@/components/MercadoDePasesComoUnPro';
 
 export default function Home() {
   const currentYear = new Date().getFullYear();
@@ -56,6 +57,9 @@ export default function Home() {
 
         {/* Socios como un PRO */}
         <SociosComoUnPro />
+
+        {/* Mercado de pases como un PRO */}
+        <MercadoDePasesComoUnPro />
 
         {/* Cierre / CTA */}
         <section

@@ -1,13 +1,13 @@
-# Socios Coquitas Landing
+# Manifiesto +10 Landing
 
-Landing page para el programa "Socios Coquitas" orientado a equipos de fútbol amateur, desarrollado con React + Next.js + Tailwind CSS.
+Landing page para el **Manifiesto +10** - Los tres derechos del fútbol que jugamos todos. Plataforma que presenta identidad, conexión y sostenibilidad para equipos y jugadores de fútbol amateur, desarrollada con React + Next.js + Tailwind CSS.
 
 ## 🚀 Características
 
 - **Diseño responsive** (mobile-first) con Tailwind CSS
-- **Calculadora interactiva** con validación en tiempo real
-- **Modal de captura de leads** reutilizable
-- **Tracking de GA4** integrado
+- **Comparadores interactivos** con sliders drag para comparar profesional vs amateur
+- **Múltiples páginas**: Home, Manifiesto, Socios Coquitas
+- **Animaciones suaves** con Framer Motion
 - **SEO optimizado** con metatags y JSON-LD
 - **Accesibilidad** completa (ARIA labels, roles, etc.)
 - **Performance optimizada** (Lighthouse ≥90)
@@ -18,25 +18,82 @@ Landing page para el programa "Socios Coquitas" orientado a equipos de fútbol a
 ├── app/
 │   ├── globals.css          # Estilos globales y Tailwind
 │   ├── layout.tsx           # Layout principal con SEO
-│   └── page.tsx             # Página principal
+│   ├── page.tsx             # Página principal (Home)
+│   ├── manifiesto/
+│   │   └── page.tsx         # Página del Manifiesto completo
+│   ├── socios/
+│   │   └── page.tsx         # Página Socios Coquitas
+│   ├── socios-coquitas/
+│   │   └── page.tsx         # Página alternativa Socios Coquitas
+│   └── more/
+│       └── page.tsx         # Página adicional
 ├── components/
-│   ├── HeroCoquitas.tsx     # Sección hero principal
-│   ├── HowItWorksTeam.tsx   # Cómo funciona
-│   ├── BenefitsTeam.tsx     # Beneficios para equipos
-│   ├── BenefitsSocios.tsx   # Beneficios para socios
-│   ├── CoquitaCalculator.tsx # Calculadora principal
-│   ├── ProdeConnector.tsx   # Enlace a PRODE
-│   ├── SponsorsTeaser.tsx   # Teaser de sponsors
-│   ├── UseCasesGrid.tsx     # Casos de uso
-│   ├── FAQCoquitas.tsx      # Preguntas frecuentes
-│   ├── FinalCTA.tsx         # CTA final
-│   ├── LeadModal.tsx        # Modal de captura de leads
-│   └── Toast.tsx            # Notificaciones toast
+│   ├── ImageComparison.tsx      # Comparador "Presentación como un PRO"
+│   ├── PrensaComoUnPro.tsx     # Comparador "Prensa como un PRO"
+│   ├── SociosComoUnPro.tsx     # Comparador "Socios como un PRO"
+│   ├── HeroCoquitas.tsx        # Sección hero Socios Coquitas
+│   ├── HowItWorksTeam.tsx      # Cómo funciona
+│   ├── BenefitsTeam.tsx        # Beneficios para equipos
+│   ├── BenefitsSocios.tsx      # Beneficios para socios
+│   ├── CoquitaCalculator.tsx    # Calculadora principal
+│   ├── ProdeConnector.tsx      # Enlace a PRODE
+│   ├── SponsorsTeaser.tsx      # Teaser de sponsors
+│   ├── UseCasesGrid.tsx        # Casos de uso
+│   ├── FAQCoquitas.tsx         # Preguntas frecuentes
+│   ├── FinalCTA.tsx            # CTA final
+│   ├── LeadModal.tsx           # Modal de captura de leads
+│   └── Toast.tsx               # Notificaciones toast
 ├── lib/
 │   ├── constants.ts         # Constantes y textos
 │   └── utils.ts             # Utilidades y helpers
+├── public/                   # Assets estáticos
+│   ├── equipopro-2.png      # Imagen comparador profesional
+│   ├── equipo10-2.png       # Imagen comparador amateur
+│   ├── prensaespn.png       # Imagen prensa profesional
+│   ├── prensagolpopular.png # Imagen prensa amateur
+│   ├── sociospro.png        # Imagen socios profesional
+│   └── socios10.png         # Imagen socios amateur
 └── README.md
 ```
+
+## 🎯 Páginas Principales
+
+### `/` - Home
+Página principal que presenta los comparadores interactivos:
+- **Presentación como un PRO**: Compara presentación profesional vs amateur con +10
+- **Prensa como un PRO**: Compara cobertura mediática ESPN vs Gol Popular
+- **Socios como un PRO**: Compara programas de socios profesional vs Socios Coquita
+- CTA final para sumarse al Manifiesto +10
+
+### `/manifiesto` - Manifiesto Completo
+Página dedicada al Manifiesto +10 con:
+- **Hero**: Introducción al Manifiesto +10
+- **Los tres derechos**: Identidad, Conectarse y crecer, Sostenerse desde la comunidad
+- **Los dolores**: Problemas del fútbol amateur por cada derecho
+- **Implementación**: Soluciones +10 para cada derecho
+
+### `/socios` - Socios Coquitas
+Landing page del programa Socios Coquitas con calculadora interactiva, beneficios y casos de uso.
+
+## 🎨 Componentes Comparadores
+
+### ImageComparison (`Presentación como un PRO`)
+Compara la presentación visual de equipos profesionales vs equipos amateur con +10:
+- Slider interactivo con drag
+- Imágenes: `equipopro-2.png` vs `equipo10-2.png`
+- Características de cada lado en tarjetas
+
+### PrensaComoUnPro (`Prensa como un PRO`)
+Compara la cobertura mediática profesional (ESPN) vs amateur (Gol Popular):
+- Slider interactivo con drag
+- Imágenes: `prensaespn.png` vs `prensagolpopular.png`
+- Características de prensa profesional vs Gol Popular
+
+### SociosComoUnPro (`Socios como un PRO`)
+Compara programas de socios de clubes profesionales vs Socios Coquita:
+- Slider interactivo con drag
+- Imágenes: `sociospro.png` vs `socios10.png`
+- Características de programas profesionales vs Socios Coquita
 
 ## 🛠️ Configuración
 
@@ -71,39 +128,28 @@ npm start
 
 ### Textos y Contenido
 
-Todos los textos están centralizados en `lib/constants.ts`:
+Los textos están centralizados en `lib/constants.ts`:
 
 ```typescript
 export const CONTENT = {
   hero: {
-    title: 'Financiá tu equipo con Socios Coquitas',
+    title: 'Manifiesto +10',
     // ... más textos
   },
   // ... más secciones
 };
 ```
 
-### Valores por Defecto de la Calculadora
+### Comparadores
 
-En `lib/constants.ts`:
-
-```typescript
-export const CALCULATOR_DEFAULTS = {
-  indiceCoquita: 1500,    // Valor por defecto del índice
-  jugadores: 20,           // Cantidad de jugadores por defecto
-  sociosPorJugador: 7,     // Socios por jugador por defecto
-  // ... rangos mínimos y máximos
-};
-```
-
-### Enlaces Externos
+Los comparadores usan el componente `ReactCompareSlider` de `react-compare-slider`:
 
 ```typescript
-export const EXTERNAL_LINKS = {
-  prode: 'https://prode-mediocomunitario.mas10.bar',
-  tally: 'https://tally.so/r/your-form-id',
-  webhook: 'https://your-n8n-webhook.com/coquitas-lead',
-};
+<ReactCompareSlider
+  itemOne={<ReactCompareSliderImage src="/imagen-pro.png" />}
+  itemTwo={<ReactCompareSliderImage src="/imagen-amateur.png" />}
+  position={50}
+/>
 ```
 
 ## 🎯 Tracking y Analytics
@@ -155,14 +201,6 @@ if (!response.ok) {
 }
 ```
 
-### Formularios
-
-El modal maneja tres tipos de leads:
-
-- `create_program` - Crear programa Coquita
-- `consultation` - Consulta general
-- `sponsors` - Interés en sponsors
-
 ## 🎨 Estilos y Diseño
 
 ### Tailwind CSS
@@ -173,6 +211,7 @@ El proyecto usa Tailwind CSS con configuración personalizada en `tailwind.confi
 - Tipografías (Inter)
 - Animaciones personalizadas
 - Utilidades de espaciado
+- Gradientes para fondos de secciones
 
 ### Componentes Reutilizables
 
@@ -182,7 +221,18 @@ El proyecto usa Tailwind CSS con configuración personalizada en `tailwind.confi
 .card          /* Tarjeta base */
 .input-field   /* Campo de entrada */
 .container-custom /* Contenedor principal */
+.section-padding /* Padding estándar de secciones */
+.text-gradient /* Gradiente de texto */
 ```
+
+### Animaciones
+
+Los comparadores usan **Framer Motion** para animaciones suaves:
+
+- Fade in al entrar en viewport
+- Scale animations
+- Smooth transitions
+- Stagger animations en listas
 
 ## 📱 Responsive Design
 
@@ -190,6 +240,7 @@ El proyecto usa Tailwind CSS con configuración personalizada en `tailwind.confi
 - **Breakpoints**: sm (640px), md (768px), lg (1024px), xl (1280px)
 - **Grid adaptativo**: 1 columna → 2 → 3 según el dispositivo
 - **Tipografía escalable**: Tamaños que se adaptan al viewport
+- **Sliders responsive**: Funcionan perfectamente en mobile y desktop
 
 ## ♿ Accesibilidad
 
@@ -199,6 +250,7 @@ El proyecto usa Tailwind CSS con configuración personalizada en `tailwind.confi
 - **Contraste** de colores WCAG AA
 - **Alt text** en imágenes
 - **Focus visible** en todos los elementos
+- **Screen reader friendly** en sliders y comparadores
 
 ## 🚀 Performance
 
@@ -209,6 +261,7 @@ El proyecto usa Tailwind CSS con configuración personalizada en `tailwind.confi
 - **Memoización** de cálculos
 - **Imágenes optimizadas** con Next.js Image
 - **CSS purging** con Tailwind
+- **Code splitting** automático con Next.js
 
 ### Lighthouse Score Objetivo
 
@@ -226,13 +279,14 @@ El proyecto usa Tailwind CSS con configuración personalizada en `tailwind.confi
 - Twitter Card
 - JSON-LD structured data
 - Canonical URLs
+- Meta tags por página
 
 ### Configuración en `app/layout.tsx`
 
 ```typescript
 export const metadata: Metadata = {
-  title: 'Socios Coquitas - Financiá tu equipo de fútbol amateur',
-  description: 'Convocá a tu comunidad...',
+  title: 'Manifiesto +10 - Fútbol que jugamos todos',
+  description: 'Los tres derechos del fútbol amateur...',
   // ... más configuración
 };
 ```
@@ -257,10 +311,11 @@ export const metadata: Metadata = {
 
 ### Métricas Recomendadas
 
-1. **Conversión de calculadora**: % de usuarios que completan el cálculo
-2. **Tasa de leads**: % de usuarios que envían el formulario
-3. **Tiempo en página**: Engagement del usuario
-4. **Bounce rate**: Calidad del tráfico
+1. **Engagement con comparadores**: % de usuarios que interactúan con sliders
+2. **Conversión de calculadora**: % de usuarios que completan el cálculo
+3. **Tasa de leads**: % de usuarios que envían el formulario
+4. **Tiempo en página**: Engagement del usuario
+5. **Navegación entre páginas**: Flujo de usuarios
 
 ### Herramientas
 
@@ -275,6 +330,11 @@ export const metadata: Metadata = {
 1. Conecta el repositorio a Vercel
 2. Configura las variables de entorno
 3. Deploy automático en cada push
+
+```bash
+# Deploy manual a producción
+vercel --prod --yes
+```
 
 ### Otras Plataformas
 
@@ -292,5 +352,4 @@ Para dudas o problemas:
 
 ---
 
-**Desarrollado con ❤️ para +10**
-
+**Desarrollado con ❤️ para +10 · Fútbol que jugamos todos**
