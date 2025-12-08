@@ -148,7 +148,7 @@ export default function MercadoDePasesComoUnPro() {
               </li>
               <li className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
-                <span>Equipos publican necesidades: "buscamos 9 goleador", "necesitamos arquero", "sumamos defensores zurdos"</span>
+                <span>Equipos publican necesidades: &quot;buscamos 9 goleador&quot;, &quot;necesitamos arquero&quot;, &quot;sumamos defensores zurdos&quot;</span>
               </li>
               <li className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
