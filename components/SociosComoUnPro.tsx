@@ -53,7 +53,7 @@ export default function SociosComoUnPro() {
             </div>
 
             {/* Comparison Slider */}
-            <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 w-full" style={{ aspectRatio: '16/9' }}>
+            <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 w-full" style={{ aspectRatio: '4/3' }}>
               <ReactCompareSlider
                 itemOne={
                   <ReactCompareSliderImage
