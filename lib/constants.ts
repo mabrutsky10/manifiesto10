@@ -319,11 +319,42 @@ export const CAROUSEL_SLIDES = [
 ] as const;
 
 // SEO Configuration
+// Helper para generar URLs absolutas (requerido para Open Graph)
+const getAbsoluteUrl = (path: string): string => {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://manifiesto-tau.vercel.app';
+  return `${baseUrl}${path}`;
+};
+
+// Configuración SEO base - Manifiesto +10 (contenido principal)
 export const SEO_CONFIG = {
-  title: 'Socios Coquitas - Financiá tu equipo de fútbol amateur',
-  description: 'Convocá a tu comunidad: cada socio aporta "lo que vale una coca" por mes y acelera tu vestuario, viajes y premios.',
-  keywords: 'fútbol amateur, financiamiento, socios, equipo, vestuario, viajes, premios',
+  // Home / Principal
+  title: 'Manifiesto +10 - Fútbol que jugamos todos',
+  description: 'Los tres derechos del fútbol amateur: identidad, conexión y sostenibilidad. Compará herramientas profesionales vs amateur y transformá tu equipo con +10.',
+  keywords: 'fútbol amateur, fútbol popular, manifiesto +10, equipos amateur, identidad futbolística, socios coquitas, gol popular, mercado de pases',
   ogImage: '/og-image.jpg',
+  ogImageAbsolute: getAbsoluteUrl('/og-image.jpg'),
   twitterCard: 'summary_large_image',
+  siteName: 'Manifiesto +10',
+  locale: 'es_AR',
+  type: 'website',
+} as const;
+
+// Configuración SEO por página
+export const SEO_PAGES = {
+  home: {
+    title: 'Manifiesto +10 - Compará herramientas PRO vs Amateur',
+    description: 'Presentación, prensa y socios como un PRO. Comparadores interactivos que muestran cómo +10 transforma equipos amateur con herramientas profesionales.',
+    keywords: 'fútbol amateur, comparación profesional amateur, herramientas fútbol, presentación equipos, prensa fútbol, socios equipos',
+  },
+  manifiesto: {
+    title: 'Manifiesto +10 - Los tres derechos del fútbol que jugamos todos',
+    description: 'Identidad, Conectarse y crecer, Sostenerse desde la comunidad. Una declaración para equipos y jugadores que escriben la historia desde el potrero.',
+    keywords: 'manifiesto fútbol, derechos fútbol amateur, identidad equipos, comunidad fútbol, sostenibilidad fútbol',
+  },
+  socios: {
+    title: 'Socios Coquitas - Financiá tu equipo de fútbol amateur',
+    description: 'Convocá a tu comunidad: cada socio aporta "lo que vale una coca" por mes y acelera tu vestuario, viajes y premios.',
+    keywords: 'fútbol amateur, financiamiento, socios, equipo, vestuario, viajes, premios, cuota social',
+  },
 } as const;
 
