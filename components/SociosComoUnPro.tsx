@@ -57,13 +57,13 @@ export default function SociosComoUnPro() {
               <ReactCompareSlider
                 itemOne={
                   <ReactCompareSliderImage
-                    src="/sociospro.png"
+                    src="/tribunapro.png"
                     alt="Programa de socios profesional"
                   />
                 }
                 itemTwo={
                   <ReactCompareSliderImage
-                    src="/socios10.png"
+                    src="/tribuna10.png"
                     alt="Socios Coquita club amateur"
                   />
                 }
